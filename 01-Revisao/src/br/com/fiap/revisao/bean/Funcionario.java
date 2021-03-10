@@ -20,6 +20,8 @@ public class Funcionario {
 	private int id;
 	private String nome;
 	private int anoNascimento;
+	private Genero genero;
+	
 
 	// Construtores
 	public Funcionario() {
@@ -70,6 +72,14 @@ public class Funcionario {
 
 	public void setAnoNascimento(int anoNascimento) {
 		this.anoNascimento = anoNascimento;
+	}
+
+	public Genero getGenero() {
+		return genero;
+	}
+
+	public void setGenero(Genero genero) {
+		this.genero = genero;
 	}
 
 }
