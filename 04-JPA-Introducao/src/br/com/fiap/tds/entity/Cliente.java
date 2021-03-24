@@ -32,11 +32,11 @@ public class Cliente {
 	@Enumerated(EnumType.STRING)
 	private Genero genero;
 
-	@Column(name = "nr_cep", nullable = false, length = 10)
+	@Column(name = "nr_cep", length = 10)
 	private String cep;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name = "dt_nascimento", nullable = false)
+	@Column(name = "dt_nascimento")
 	private Calendar dataNascimento;
 
 	@Lob
