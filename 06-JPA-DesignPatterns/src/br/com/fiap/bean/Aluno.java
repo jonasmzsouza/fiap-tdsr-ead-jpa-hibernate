@@ -26,6 +26,11 @@ public class Aluno {
 
 	public Aluno() {
 	}
+	
+	public Aluno(String nome, String turma) {
+		this.nome = nome;
+		this.turma = turma;
+	}
 
 	public Aluno(int codigo, String nome, String turma) {
 		this.codigo = codigo;
