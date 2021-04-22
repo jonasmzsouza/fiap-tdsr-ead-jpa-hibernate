@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -34,7 +35,7 @@ public class GrupoChallenge {
 	private ProjetoChallenge projeto;
 
 	// Mapear o relacionamento um-para-muitos bidirecional
-	@OneToMany(mappedBy = "grupo")
+	@OneToMany(mappedBy = "grupo", fetch = FetchType.EAGER, cascade = { CascadeType.PERSIST, CascadeType.MERGE })
 	private List<Aluno> alunos;
 
 	// Método auxiliar para adicionar um aluno no grupo, para garantir o

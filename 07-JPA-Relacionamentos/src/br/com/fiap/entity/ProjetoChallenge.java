@@ -40,7 +40,12 @@ public class ProjetoChallenge {
 	private String setor;
 
 	// Mapear o relacionamento um-para-um
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY) // fetch -> usado para trazer informações do banco - FetchType.EAGER é o padrão 
+	/* Parametros
+	 * cascade -> Define se a ação (Persist, Merge, Refresh, Remove) será aplicada no relacionamento também
+	 * fetch -> define o momento que o relacionamento será carregado em uma pesquisa - FetchType.EAGER é o padrão 
+	 * */
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	// É opcional, configura a coluna de FK na tabela
 	@JoinColumn(name = "cd_grupo", nullable = false, unique = true)
 	private GrupoChallenge grupo;
 

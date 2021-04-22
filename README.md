@@ -26,5 +26,8 @@ Repositório de atividades e exercícios da graduação de Tecnologia em Anális
 #### 06/04/2021 -> Aula 06 - DAO Genérico: Interface específica, classe específica e instanciar classe anonima
 - [DAO Genérico](https://github.com/jonasmzsouza/fiap-tdsr-ead/commit/4b47d739ba54818b012582a602ae2dc7c908e778)
 
-#### 13/04/2021 -> Aula 07 - DAO Genérico: Interface específica, classe específica e instanciar classe anonima
-- [JPA-Relacionamentos]
+#### 13/04/2021 -> Aula 07 - JPA-Relacionamentos
+- [JPA-Relacionamentos](https://github.com/jonasmzsouza/fiap-tdsr-ead/commit/a83b17b3a1cee11f3f2225bee0cced1c614462c6)
+
+#### 20/04/2021 -> Aula 08 - JPA-Relacionamentos e Exercício
+- [JPA-Relacionamentos e Exercício]
