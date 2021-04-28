@@ -30,4 +30,7 @@ Repositório de atividades e exercícios da graduação de Tecnologia em Anális
 - [JPA-Relacionamentos](https://github.com/jonasmzsouza/fiap-tdsr-ead/commit/a83b17b3a1cee11f3f2225bee0cced1c614462c6)
 
 #### 20/04/2021 -> Aula 08 - JPA-Relacionamentos e Exercício
-- [JPA-Relacionamentos e Exercício]
+- [JPA-Relacionamentos e Exercício](https://github.com/jonasmzsouza/fiap-tdsr-ead/commit/bf402432de0cc7945280ddd36a5dde4221e5f82f)
+
+#### 27/04/2021 -> Aula 09 - Exercício
+- [Exercício]

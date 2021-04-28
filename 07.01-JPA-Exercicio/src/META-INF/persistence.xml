@@ -16,9 +16,9 @@
 				value="org.hibernate.dialect.Oracle12cDialect" />
 			<property name="javax.persistence.jdbc.driver"
 				value="oracle.jdbc.OracleDriver" />
-			<property name="javax.persistence.jdbc.user" value="00000" />
+			<property name="javax.persistence.jdbc.user" value="RM84575" />
 			<property name="javax.persistence.jdbc.password"
-				value="00000" />
+				value="280688" />
 			<property name="javax.persistence.jdbc.url"
 				value="jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl" />
 		</properties>
