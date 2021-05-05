@@ -1,6 +1,11 @@
 # Enterprise Application Development
 
-Desenvolver, de uma maneira rápida e produtiva, aplicações corporativas utilizando os principais frameworks de mercado das plataformas Java e .NET. Tecnologias abordadas: JPA, Hibernate, EJB, ASP.NET MVC, WEB API e Entity Framework.
+<blockquote>
+    <p>
+        Desenvolver, de uma maneira rápida e produtiva, aplicações corporativas utilizando os principais frameworks de mercado das plataformas Java e .NET. Tecnologias abordadas: JPA, Hibernate, EJB, ASP.NET MVC, WEB API e Entity Framework.
+    </p>
+    <footer>— <cite><a href="https://www.fiap.com.br">FIAP</a></cite></footer>
+</blockquote>
 
 Repositório de atividades e exercícios da graduação de Tecnologia em Análise e Desenvolvimento de Sistemas na FIAP ano de 2021.
 
@@ -33,4 +38,7 @@ Repositório de atividades e exercícios da graduação de Tecnologia em Anális
 - [JPA-Relacionamentos e Exercício](https://github.com/jonasmzsouza/fiap-tdsr-ead/commit/bf402432de0cc7945280ddd36a5dde4221e5f82f)
 
 #### 27/04/2021 -> Aula 09 - Exercício
-- [Exercício]
+- [Exercício](https://github.com/jonasmzsouza/fiap-tdsr-ead/commit/5da952bcb0769c47b33933777c19009d8956775c)
+
+#### 04/05/2021 -> Aula 10 - JPA-JPQL
+- [JPA-JPQL]
