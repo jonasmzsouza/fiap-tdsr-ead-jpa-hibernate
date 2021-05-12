@@ -54,6 +54,12 @@ public class Pacote {
 	public Pacote() {
 	}
 
+	public Pacote(String descricao, Integer qtdDias) {
+		super();
+		this.descricao = descricao;
+		this.qtdDias = qtdDias;
+	}
+
 	public String getDescricao() {
 		return descricao;
 	}

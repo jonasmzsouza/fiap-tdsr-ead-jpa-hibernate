@@ -18,4 +18,7 @@ public interface GenericDAO<T, K> {
 	void salvar() throws CommitException;
 
 	List<T> listar();
+
+	// Listar com paginação
+	List<T> listar(int primeiraPosicao, int maximoResultado);
 }

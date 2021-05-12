@@ -41,4 +41,7 @@ Repositório de atividades e exercícios da graduação de Tecnologia em Anális
 - [Exercício](https://github.com/jonasmzsouza/fiap-tdsr-ead/commit/5da952bcb0769c47b33933777c19009d8956775c)
 
 #### 04/05/2021 -> Aula 10 - JPA-JPQL
-- [JPA-JPQL]
+- [JPA-JPQL - Interface Query, TypedQuery, métodos e passagem de parâmetros](https://github.com/jonasmzsouza/fiap-tdsr-ead/commit/1972e66f321058f3b93d2a40f266869ff63e56a8)
+
+# 11/05/2021 -> Aula 11 - JPA-JPQL - Paginação e Projeções
+- [JPA-JPQL - Paginação e Projeções]
