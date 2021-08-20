@@ -29,5 +29,9 @@ public interface PacoteDAO extends GenericDAO<Pacote, Integer> {
 	
 	// 12 - Somar preços por um transporte específico
 	double somarPrecoPorTransporte(String transporte);
+	
+	// Utilizando query nativa do banco
+	// Buscar por qtde de dias maior e preço menor
+	List<Pacote> buscarPorQtdDiasMaiorEPrecoMenor(int qtd, float preco);
 
 }

@@ -10,15 +10,18 @@ import javax.persistence.EntityManager;
 import br.com.fiap.dao.CidadeDAO;
 import br.com.fiap.dao.ClienteDAO;
 import br.com.fiap.dao.PacoteDAO;
+import br.com.fiap.dao.ReservaDAO;
 import br.com.fiap.dao.TransporteDAO;
 import br.com.fiap.dao.impl.CidadeDAOImpl;
 import br.com.fiap.dao.impl.ClienteDAOImpl;
 import br.com.fiap.dao.impl.PacoteDAOImpl;
+import br.com.fiap.dao.impl.ReservaDAOImpl;
 import br.com.fiap.dao.impl.TransporteDAOImpl;
 import br.com.fiap.dao.util.DataUtil;
 import br.com.fiap.entity.Cidade;
 import br.com.fiap.entity.Cliente;
 import br.com.fiap.entity.Pacote;
+import br.com.fiap.entity.Reserva;
 import br.com.fiap.entity.Transporte;
 import br.com.fiap.singleton.EntityManagerFactorySingleton;
 
@@ -157,6 +160,31 @@ public class TestePesquisa {
 		// Somar preços por um transporte específico
 		Double soma = pacoteDao.somarPrecoPorTransporte("CoMetA");
 		System.out.println("Somar preços por um transporte específico: " + soma);
+
+		// Instanciar a ReservaDAOImlp
+		ReservaDAO reservaDao = new ReservaDAOImpl(em);
+
+		// Pesquisar reservas por parte do nome do cliente
+		List<Reserva> reservas = reservaDao.buscarClientePorNome("a");
+
+		// Exibir a descricao do pacote, nome do cliente e data da reserva
+		reservas.forEach(r -> System.out.println(r.getPacote().getDescricao() + " " + r.getCliente().getNome() + " "
+				+ DataUtil.formatar(r.getDataReserva())));
+
+		// Pesquisar reservas por preco do pacote entre 2 valores
+		reservas = reservaDao.buscarPorPrecoPacote(1000, 5000);
+
+		// Exibir a descricao do pacote e data da reserva
+		System.out.println("Exibir a descricao do pacote e data da reserva:");
+		reservas.forEach(r -> System.out.println(r.getPacote().getDescricao() + " " + r.getPacote().getPreco() + " "
+				+ DataUtil.formatar(r.getDataReserva())));
+
+		// Pesquisar pacote por preco e qtd de dias
+		pacotes = pacoteDao.buscarPorQtdDiasMaiorEPrecoMenor(5, 1000);
+
+		// Exibir a descrição do pacote, a qtd de dias e o preco
+		System.out.println("Buscar pacotes por preço menor e qdt de dias maior");
+		pacotes.forEach(p -> System.out.println(p.getDescricao() + " " + p.getQtdDias() + " " + p.getPreco()));
 
 		// Fechar
 		em.close();

@@ -26,26 +26,31 @@ public class PacoteDAOImpl extends GenericDAOImpl<Pacote, Integer> implements Pa
 	@Override
 	public List<Object[]> buscarPorPrecoMenor(float preco) {
 		return em.createQuery("select p.descricao, p.qtdDias from Pacote p where p.preco < :p", Object[].class)
-				.setParameter("p", preco).getResultList();
+				.setParameter("p", preco)
+				.getResultList();
 	}
 
 	@Override
 	public List<Pacote> buscarPorPrecoMenor2(float preco) {
 		return em
 				.createQuery("select new Pacote(p.descricao, p.qtdDias) from Pacote p where p.preco < :p", Pacote.class)
-				.setParameter("p", preco).getResultList();
+				.setParameter("p", preco)
+				.getResultList();
 	}
 
 	@Override
 	public List<String> buscarPorPrecoMenor3(float preco) {
 		return em.createQuery("select p.descricao from Pacote p where p.preco < :p", String.class)
-				.setParameter("p", preco).getResultList();
+				.setParameter("p", preco)
+				.getResultList();
 	}
 
 	@Override
 	public List<Pacote> buscarPorDatas(Calendar inicio, Calendar fim) {
 		return em.createQuery("from Pacote p where p.dataSaida between :dtInicio and :dtFim", Pacote.class)
-				.setParameter("dtInicio", inicio).setParameter("dtFim", fim).getResultList();
+				.setParameter("dtInicio", inicio)
+				.setParameter("dtFim", fim)
+				.getResultList();
 	}
 
 	@Override
@@ -54,6 +59,15 @@ public class PacoteDAOImpl extends GenericDAOImpl<Pacote, Integer> implements Pa
 		query.setParameter("trans", transporte);
 		Double soma = query.getSingleResult(); 
 		return soma;
+	}
+
+	@Override
+	@SuppressWarnings("unchecked")
+	public List<Pacote> buscarPorQtdDiasMaiorEPrecoMenor(int qtd, float preco) {
+		return em.createNativeQuery("select * from TB_EAD_PACOTE where qt_dias > :qDias and vl_pacote < :pPreco", Pacote.class)
+				.setParameter("qDias", qtd)
+				.setParameter("pPreco", preco)
+				.getResultList();
 	}
 
 }
